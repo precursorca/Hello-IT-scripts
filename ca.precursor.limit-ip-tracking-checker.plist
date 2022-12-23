@@ -5,7 +5,7 @@
         <key>Label</key>
         <string>local.restart</string>
         <key>Program</key>
-        <string>/usr/local/limit-ip-tracking-checker</string>
+        <string>/usr/local/limit-ip-tracking-checker.sh</string>
         <key>StartInterval</key> 
         <integer>1800</integer>
     </dict>
