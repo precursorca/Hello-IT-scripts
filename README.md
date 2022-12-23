@@ -19,7 +19,7 @@ This script utilizes Joel Bruner's script (with attribution) to determine the st
 
 Since Joe's script must be run as root and Hello-IT runs as the user I use Joel's script in a launchdaemon:
 
-ca.precursor.limit-ip-tracking-checker.plist
+`ca.precursor.limit-ip-tracking-checker.plist`
 
 to run the script:
 
@@ -27,7 +27,7 @@ to run the script:
 
 and write the status result to a text file at:
 
-/usr/local/LimitIPtrackingTest.txt
+`/usr/local/LimitIPtrackingTest.txt`
 
 And then Hello-IT just checks that text file.
 
