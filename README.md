@@ -17,7 +17,7 @@ This script utilizes Joel Bruner's script (with attribution) to determine the st
 
 This script utilizes Joel Bruner's script (with attribution) to determine the state of Limit IP Tracking (assuming that on is good and green and off is not so good and orange). Of course you may decide differently.
 
-Since Joe's script must be run as root and Hello-IT runs as the user I use Joel's script in a launchdaemon:
+Since Joel's script must be run as root and Hello-IT runs as the user I use Joel's script in a launchdaemon:
 
 `ca.precursor.limit-ip-tracking-checker.plist`
 
