@@ -3,7 +3,7 @@
 <plist version="1.0">
     <dict>
         <key>Label</key>
-        <string>local.restart</string>
+        <string>check.limit.ip.status</string>
         <key>Program</key>
         <string>/usr/local/limit-ip-tracking-checker.sh</string>
         <key>StartInterval</key> 
