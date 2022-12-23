@@ -23,7 +23,7 @@ ca.precursor.limit-ip-tracking-checker.plist
 
 to run the script:
 
-'/usr/local/limit-ip-tracking-checker.sh'
+`/usr/local/limit-ip-tracking-checker.sh`
 
 and write the status result to a text file at:
 
