@@ -12,3 +12,12 @@ Install the provided scripts by copying them to the Hello-IT CustomScripts direc
 ### Display iCloud Private Relay Status
 
 This script utilizes Joel Bruner's script (with attribution) to determine the state of iCloud Private Relay (assuming that on is good and green and off is not so good and orange. Of course you may decide differently.
+
+### Display Limit IP Tracking Status
+
+This script utilizes Joel Bruner's script (with attribution) to determine the state of Limit IP Tracking (assuming that on is good and green and off is not so good and orange. Of course you may decide differently.
+
+Since Joe's script must be run as root and Hello-IT runs as the user I use Joel's script in a launchdaemon to write the status result to a text file at:
+/usr/local/LimitIPtrackingTest.txt
+And then Hello-IT just checks the text file.
+
