@@ -9,6 +9,10 @@ Some Scripts for Yoann Gini's Hello-IT.
 
 ## The Scripts
 
+### Update Status
+
+A simple script to poll softwareupdate and find out if the macOS is current or requires a patch/update. Green for no patch required, Orange for macOS updates waiting.
+
 ### Display iCloud Private Relay Status
 
 This script utilizes Joel Bruner's script (with attribution) to determine the state of iCloud Private Relay (assuming that on is good and green and off is not so good and orange). Of course you may decide differently.
