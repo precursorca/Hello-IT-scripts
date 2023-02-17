@@ -6,27 +6,23 @@
 #  Tooltip: Update recommendation
 #
 #  Status:
-#    Green  - softwareupdate --list = "No new software available."
-#    Orange - softwareupdate --list shows that updates are listed.
+#    Green  - SoftwareUpdate.plist = "( )"
+#    Orange - SoftwareUpdate.plist shows various recommended updates in curly brackets.
 #    Red    - not used in this version
 #
 #  Created by Alex Narvey, Precursor Systems
 #
 #  Written: 02/16/23
+#  Modfied: 02/17/23 - remove the ened to check softwareupdate --list by reading /Library/Preferences/com.apple.SoftwareUpdate.plist RecommendedUpdates
 
 
 ### The following line load the Hello IT bash script lib
 . "$HELLO_IT_SCRIPT_SH_LIBRARY/com.github.ygini.hello-it.scriptlib.sh"
 
-
-#POSITIVE="No new software available."
-LOC="/Users/Shared/update_status.txt"
-softwareupdate --list 2>$LOC
-STATUS="$(cat $LOC)"
-#echo $STATUS
-if [ "${STATUS}" = "No new software available." ]
-    then 
-    echo "No macOS updates for you!"
+#If the list has curly brackets in it then software udpates are available
+STATUS=$(defaults read /Library/Preferences/com.apple.SoftwareUpdate.plist RecommendedUpdates)
+if [[ $STATUS != *"{"* ]]; then
+	echo "No macOS updates for you!"
     else
     echo "macOS updates are available for your computer."
 fi
