@@ -21,14 +21,9 @@
 
 #If the list has curly brackets in it then software udpates are available
 STATUS=$(defaults read /Library/Preferences/com.apple.SoftwareUpdate.plist RecommendedUpdates)
-if [[ $STATUS != *"{"* ]]; then
-	echo "No macOS updates for you!"
-    else
-    echo "macOS updates are available for your computer."
-fi
 
 function updateStatus {
-    if [ "${STATUS}" = "No new software available." ] # No new software available
+    if [[ $STATUS != *"{"* ]] # No new software available
     then
         updateTitle "macOS is up-to-date!"
         updateState "${STATE[0]}"
